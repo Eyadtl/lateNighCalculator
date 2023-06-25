@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin: 10px;
+}
+
+.result {
+    animation: forwards;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.eq {
+    display: flex;
+    padding: 10px;
+}
+
+.eq button {
+    margin: 10px;
+}
