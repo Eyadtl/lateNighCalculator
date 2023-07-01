@@ -24,3 +24,11 @@ input {
 .eq button {
     margin: 10px;
 }
+
+.plus-1 {
+    width: 100px;
+}
+
+.minus-1 {
+    width: 100px;
+}
