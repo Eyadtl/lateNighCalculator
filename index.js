@@ -8,7 +8,6 @@ const division = document.querySelector('.division')
 const mult = document.querySelector('.mult')
 
 
-
 plus.addEventListener('click', () => {
 
     document.querySelector(".result").innerHTML = parseInt(first.value) + parseInt(second.value);
@@ -27,4 +26,78 @@ division.addEventListener('click', () => {
 mult.addEventListener('click', () => {
 
     document.querySelector(".result").innerHTML = parseInt(first.value) * parseInt(second.value);
+});
+
+
+const vehicle1 = document.querySelector("#vehicle1");
+const vehicle2 = document.querySelector("#vehicle2");
+const vehicle3 = document.querySelector("#vehicle3");
+
+const test = document.querySelector(".test")
+
+vehicle1.addEventListener('click', () => {
+    if (vehicle1.checked = true) {
+        vehicle2.checked = false;
+        vehicle3.checked = false;
+    }
+    vehicle2.addEventListener('click', () => {
+        if (vehicle2.checked = true) {
+            vehicle1.checked = false;
+            vehicle3.checked = false;
+        }
+        vehicle3.addEventListener('click', () => {
+            if (vehicle3.checked = true) {
+                vehicle1.checked = false;
+                vehicle2.checked = false;
+            }
+        })
+    })
+})
+
+
+const plusPr = document.querySelector(".plus-1");
+const product = document.querySelector(".product")
+const minusPr = document.querySelector(".minus-1")
+var prod = 0;
+plusPr.addEventListener('click', () => {
+    prod++;
+    product.innerHTML = prod;
+})
+
+minusPr.addEventListener('click', () => {
+    prod--;
+    product.innerHTML = prod;
+})
+
+
+
+
+var number_of_videos = document.querySelector(".videos");
+var enter = document.querySelector(".enter");
+var arr = [];
+
+enter.addEventListener("click", () => {
+    var inputs = [];
+
+    for (var i = 0; i < parseInt(number_of_videos.value); i++) {
+        const input = document.createElement("input");
+        input.classList.add("input" + i);
+        document.body.appendChild(input);
+        inputs.push(input); // Store the input elements in an array
+    }
+
+    var button = document.createElement("button");
+    button.innerHTML = "calculate";
+    document.body.appendChild(button);
+    button.classList.add("press");
+
+    button.addEventListener("click", () => {
+        var values = inputs.map((input) => input.value); // Retrieve the values of the input fields
+        var sum = values.reduce((acc, curr) => acc + parseFloat(curr), 0);
+        // console.log(sum / number_of_videos.value)
+        const theAVREGE = document.createElement("h2");
+        document.body.appendChild(theAVREGE)
+        theAVREGE.innerText = "The average is " + Math.round((sum / number_of_videos.value));
+
+    });
 });
