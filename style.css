@@ -1,15 +1,59 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/clay-banks-u27Rrbs9Dwc-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
 .container {
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+
+
 input {
+    margin: 20px;
+    background-color: #141414;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid black;
+    /* color: white; */
+    padding: 5px;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+    color: white;
+}
+
+.container1 {
+    display: grid;
+    margin: auto;
+    max-width: 200px;
+}
+
+
+h2 {
+    padding: 10px;
+
+}
+
+button {
     margin: 10px;
 }
 
-.result {
+/* .result {
     animation: forwards;
     color: black;
     font-size: 20px;
@@ -31,4 +75,4 @@ input {
 
 .minus-1 {
     width: 100px;
-}
+} */
